@@ -21,7 +21,7 @@
     @endif
     </p>
     <div>
-      <a href="{{{ Config::get('yupi.register_url') }}}">{{{ Lang::get('email.register_invite') }}}</a>
+      <a href="{{{ Config::get('yupi.register_url') . '?email=' . $recipient_user_email }}}">{{{ Lang::get('email.register_invite') }}}</a>
     </div>
     <p>
     {{{ Lang::get('email.card_received_register_msg2') }}}

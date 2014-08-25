@@ -17,7 +17,11 @@ class UsersController extends Controller
      */
     public function getCreate()
     {
-        return View::make(Config::get('confide::signup_form'));
+      $email = '';
+      if (isset($_GET['email'])) {
+        $email = $_GET['email'];
+      }
+      return View::make(Config::get('confide::signup_form'), array('email' => $email));
     }
 
     /**

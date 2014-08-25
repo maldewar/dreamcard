@@ -9,4 +9,7 @@ $(document).ready(function() {
       $('#email_field').fadeIn('fast').focus();
     }
   });
+  $('#email_field').focus(function(){
+    $("input[name='send_to'][value='1']").attr('checked', true);
+  });
 });

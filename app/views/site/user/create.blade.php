@@ -16,12 +16,12 @@
     <input type="hidden" name="_token" value="{{{ Session::getToken() }}}">
     <fieldset>
         <div class="form-group">
-            <label for="username">{{{ Lang::get('confide::confide.username') }}}</label>
-            <input class="form-control" placeholder="{{{ Lang::get('confide::confide.username') }}}" type="text" name="username" id="username" value="{{{ Input::old('username') }}}">
+            <label for="email">{{{ Lang::get('confide::confide.e_mail') }}} <!--small>{{{ Lang::get('confide::confide.signup.confirmation') }}}</small--></label>
+            <input class="form-control" placeholder="{{{ Lang::get('confide::confide.e_mail') }}}" type="text" name="email" id="email" value="@if($email){{{$email}}}@else{{{ Input::old('email') }}}@endif">
         </div>
         <div class="form-group">
-            <label for="email">{{{ Lang::get('confide::confide.e_mail') }}} <!--small>{{{ Lang::get('confide::confide.signup.confirmation') }}}</small--></label>
-            <input class="form-control" placeholder="{{{ Lang::get('confide::confide.e_mail') }}}" type="text" name="email" id="email" value="{{{ Input::old('email') }}}">
+            <label for="username">{{{ Lang::get('confide::confide.username') }}}</label>
+            <input class="form-control" placeholder="{{{ Lang::get('confide::confide.username') }}}" type="text" name="username" id="username" value="{{{ Input::old('username') }}}">
         </div>
         <div class="form-group">
             <label for="first_name">{{{ Lang::get('user/user.first_name') }}}</label>

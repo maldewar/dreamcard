@@ -79,7 +79,7 @@
             <div class="col-sm-6">
               <div class="panel panel-default alert-info">
                 <div class="panel-body text-center">
-                  <label class="radio inline"><input type="radio" name="send_to" value="1" @if(Input::old('send_to') == 1)checked="checked"@endif/>{{{ Lang::get('panel.send_to_somebody') }}}</label>
+                  <label class="radio inline"><input type="radio" name="send_to" value="1" @if(Input::old('send_to') === 1)checked="checked"@else checked="checked" @endif/>{{{ Lang::get('panel.send_to_somebody') }}}</label>
                   <input type="text" name="email" id="email_field" placeholder="email" class="form-control" value="{{{Input::old('email')}}}"></input>
                 </div>
               </div>
@@ -87,7 +87,7 @@
             <div class="col-sm-6">
               <div class="panel panel-default alert-info">
                 <div class="panel-body text-center">
-                  <label class="radio inline"><input type="radio" name="send_to" value="0" @if(Input::old('send_to') == 0)checked="checked"@endif/>{{{ Lang::get('panel.send_to_me') }}}</label>
+                  <label class="radio inline"><input type="radio" name="send_to" value="0" @if(Input::old('send_to') === 0)checked="checked"@endif/>{{{ Lang::get('panel.send_to_me') }}}</label>
                 </div>
               </div>
             </div>
