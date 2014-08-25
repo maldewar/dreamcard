@@ -1,0 +1,8 @@
+-- GENERATE YOUTUBE VIDEOS SEARCH TABLE --
+php artisan generate:scaffold ytResult --fields="video_id:string, url:string, title:string, username:string, user_id:string, user_url:string, views:integer, published_at:datetime, thumb:string"
+
+SELECT DISTINCT video_id, url, title, username, user_id, user_url, views, published_at, thumb 
+FROM yt_results
+INTO OUTFILE '/tmp/me_singing_results.csv'
+FIELDS ENCLOSED BY '"' TERMINATED BY ';' ESCAPED BY '"'
+LINES TERMINATED BY '\r\n';

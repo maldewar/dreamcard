@@ -1,0 +1,41 @@
+create database dreamcard;
+
+-- CONFIDE --
+php artisan confide:migration
+ (modify migration model)
+php artisan migrate
+php artisan confide:controller --restful
+php artisan confide:routes --restful
+composer dump-autoload
+php artisan config:publish zizaco/confide
+
+-- ENTRUST --
+php artisan entrust:migration
+php artisan migrate
+
+php artisan key:generate --env=local
+
+-- GENERATORS --
+composer require way/generators --dev (2.*)
+php artisan generate:scaffold card --fields="name:string, location:integer, active:tinyInteger, desc_en:text, desc_es:text"
+
+-- IMAGINE --
+"orchestra/imagine": "2.3.*@dev"
+
+-- ADD CREDIT TO USER --
+ALTER TABLE users ADD credit NUMERIC(15,2) NOT NULL DEFAULT 0 AFTER password;
+
+-- GENERATE TRANSACTIONS --
+php artisan generate:scaffold transaction --fields="user_id:integer, type:tinyInteger, mean: tinyInteger, credit:float, amount:float, target_info:string, target_user_id:integer, target_card_id:integer"
+
+-- GENERATE CARD INSTANCES --
+php artisan generate:scaffold cardInstance --fields="from_user_id:integer, amount:float, currency:tinyInteger, to_user_id:integer, to_user_email:string, card_id:integer, status:tinyInteger"
+ALTER TABLE card_instances ADD code VARCHAR(255) NOT NULL DEFAULT '' AFTER status;
+ALTER TABLE card_instances DROP FOREIGN KEY card_id;
+
+-- CREATE AUTOCOMPLETE CONTACTS --
+CREATE TABLE user_autocomplete (
+          user_id INT,
+          email VARCHAR(255),
+          username VARCHAR(255),
+          count INT);
