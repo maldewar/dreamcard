@@ -16,13 +16,16 @@ class User extends Eloquent implements ConfideUserInterface
 
   public function addContact($email) {
     $contacts = DB::table('user_autocomplete')
-                  ->select('user_id, count')
+                  ->select('user_id', 'count')
                   ->where('user_id', '=', Auth::user()->id)
-                  ->where('email', '=', $email);
-    if($contacts->count()) {
-      // Register exists, add 1
+                  ->where('email', '=', $email)->first();
+    if($contacts) {
+      /*DB::table('user_autocomplete')
+      ->increment('count', 1, array('user_id' => Auth::user()->id, 'email' => $email));*/
       DB::table('user_autocomplete')
-        ->increment('count', 1, array('user_id' => Auth::user()->id, 'email' => $email));
+        ->where('user_id', '=', Auth::user()->id)
+        ->where('email', '=', $email)
+        ->update(array('count'=> $contacts->count + 1));
     } else {
       // Register does not exist, create
       // See if contact exists

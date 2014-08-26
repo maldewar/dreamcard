@@ -58,6 +58,7 @@ return array(
   'card_done_to_me_msg' => 'Puedes comenzar a utilizar esta tarjeta, elige la opción "Mis Tarjetas" del menú de navegación para ver las instrucciones.',
   'no_transactions' => 'No tienes transacciones que mostrar.',
   'unclaimed_cards_msg' => 'Tienes tarjetas esperando ser reclamadas! seleccionalas de la lista inferior y reclámalas.',
+  'unclaimed_cards_msg2' => 'Tienes tarjetas esperando ser reclamadas! Ve a la pestaña de "Mis Tarjetas" para reclamarlas.',
   'use_credit_btn' => 'Usar Saldo',
   'see_transactions_btn' => 'Ver Transacciones',
   'see_cards_btn' => 'Mis Tarjetas',

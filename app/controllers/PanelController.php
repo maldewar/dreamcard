@@ -30,10 +30,15 @@ class PanelController extends BaseController {
      */
     $cards = Card::where('active', '=', '1')->get();
     $yupiCard = Card::yupiCard();
+    $unclaimed_cards_count = DB::table('card_instances')
+                                ->select('id')
+                                ->where('to_user_id', '=', Auth::user()->id)
+                                ->where('status', '=', CardInstance::STATUS_NOT_CLAIMED);
 
     return View::make('site/panel/useCredit', array('tab' => 'useCredit',
                                                     'yupiCard' => $yupiCard,
-                                                    'cards' => $cards));
+                                                    'cards' => $cards,
+                                                    'total_unclaimed' => $unclaimed_cards_count->count()));
   }
 
   public function useCreditCard($id) {

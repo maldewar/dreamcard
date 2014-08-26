@@ -63,6 +63,7 @@ return array(
   'card_done_to_me_msg' => 'You can start using this card, go to "My Cards" in the menu to see the instructions.',
   'no_transactions' => 'You do not have transactions to show.',
   'unclaimed_cards_msg' => 'You have cards waiting for you to be claimed! check the list below and claim them.',
+  'unclaimed_cards_msg2' => 'You have cards waiting for you to be claimed! go to "My Cards" and claim them.',
   'use_credit_btn' => 'Use Credit',
   'see_transactions_btn' => 'See Transactions',
   'see_cards_btn' => 'My Cards',

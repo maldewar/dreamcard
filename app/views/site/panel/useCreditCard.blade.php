@@ -6,6 +6,10 @@
 @parent
 @stop
 
+@section('css')
+<link rel="stylesheet" href="{{asset('assets/css/selectize.bootstrap3.css')}}">
+@stop
+
 {{-- Content --}}
 @section('content')
 
@@ -108,5 +112,13 @@
 @stop
 
 @section('scripts')
+  <script src="{{asset('assets/js/selectize.js')}}"></script>
+  <script>
+  var contacts = [
+      @foreach ($contacts as $contact)
+      { email: '{{{ $contact->email }}}' },
+      @endforeach
+      ];
+  </script>
   <script src="{{asset('assets/js/useCreditCard.js')}}"></script>
 @stop

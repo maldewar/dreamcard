@@ -13,6 +13,12 @@
 <div class="row">&nbsp;</div>
 <div class="row">
   <div class="col-sm-4">
+    @if($total_unclaimed > 0)
+    <div class="alert alert-warning alert-block">
+      <button type="button" class="close" data-dismiss="alert">&times;</button>
+      {{{ Lang::get('panel.unclaimed_cards_msg2') }}}
+    </div>
+    @endif
     @if (Auth::user()->credit == 0)
     <div class="alert alert-warning alert-block">
       <button type="button" class="close" data-dismiss="alert">&times;</button>
