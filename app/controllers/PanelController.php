@@ -231,6 +231,7 @@ class PanelController extends BaseController {
 		return View::make('site/panel/addCredit', array('tab' => 'addCredit'));
   }
 
+  /*
   public function addCreditPost() {
 
     // Simulate a $10 transaction with PayPal.
@@ -264,6 +265,7 @@ class PanelController extends BaseController {
     return View::make('site/panel/addCreditSuccess', array('tab' => 'addCredit',
                                                            'txn' => $txn));
   }
+   */
 
   public function myCards() {
     $received_cards  = DB::table('card_instances')

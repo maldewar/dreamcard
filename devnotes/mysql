@@ -39,3 +39,6 @@ CREATE TABLE user_autocomplete (
           email VARCHAR(255),
           username VARCHAR(255),
           count INT);
+
+-- PayPal --
+vendor\anouar\paypalpayment\src\Anouar\Paypalpayment\sdk_config.ini

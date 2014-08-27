@@ -68,6 +68,7 @@ return array(
   'error_insufficient_credit' => "¡No tienes suficiente saldo! El monto máximo que puedes agregar a esta tarjeta es de $:credit.",
   'error_minimum_transaction' => 'Necesitas agregar como mínimo $:minimum a esta tarjeta.',
   'error_minimum_add' => 'Necesitas especificar una cantidad de saldo a agregar.',
+  'error_cancel_transaction' => 'Tu transacción para agregar crédito ha sido cancelada.',
   'error_self_yupicard' => 'No te puedes enviar a tí mismo saldo usando una YupiCard. Por favor seleccione otro correo electrónico.',
   'error_use_card_general' => 'Ha currido un problema, no hemos podido realizar la transacción, por favor inténtelo más tarde.',
   'error_not_found_card_instance' => 'Esta instancia de tarjeta no está más disponible para ser utilizada.',

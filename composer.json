@@ -40,6 +40,7 @@
 		"preferred-install": "dist"
 	},
 	"require-dev": {
-    "dollar/generators": "dev-master"
+    "dollar/generators": "dev-master",
+    "anouar/paypalpayment": "dev-master"
 	}
 }

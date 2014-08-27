@@ -127,6 +127,7 @@ return array(
     'Dollar\Generators\GeneratorsServiceProvider',
     'Orchestra\Imagine\ImagineServiceProvider',
     'Bllim\Datatables\DatatablesServiceProvider',
+    'Anouar\Paypalpayment\PaypalpaymentServiceProvider',
 
 	),
 
@@ -199,6 +200,7 @@ return array(
     'Imagine'           => 'Orchestra\Imagine\Facade',
     'Image'             => 'App\Facades\ImageFacade',
     'Datatables'        => 'Bllim\Datatables\Facade\Datatables',
+    'Paypalpayment'     => 'Anouar\Paypalpayment\Facades\PaypalPayment',
 
 	),
 

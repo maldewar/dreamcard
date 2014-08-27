@@ -73,6 +73,7 @@ return array(
   'error_insufficient_credit' => "You don't have enough credit! The maximum amount you can add to this card is $:credit.",
   'error_minimum_transaction' => 'You need to add at least $:minimum to this card.',
   'error_minimum_add' => 'You need to specify a quantity of credit to add.',
+  'error_cancel_transaction' => 'Your transaction to add credit has been canceled.',
   'error_self_yupicard' => 'You can not send yourself credit using a YupiCard. Please select another email.',
   'error_use_card_general' => 'A problem has occurred, we could not make this transaction, please try later.',
   'error_not_found_card_instance' => 'This card instance is no longer available to use it.',
