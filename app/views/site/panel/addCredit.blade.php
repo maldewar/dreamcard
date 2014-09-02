@@ -45,7 +45,7 @@
           </div>
         </div>
         <div class="form-group text-center">
-          <button type="submit" class="btn btn-primary">
+          <button type="submit" class="btn btn-primary one-click">
             {{{ Lang::get('panel.add_credit_paypal_btn') }}}
           </button>
         </div>

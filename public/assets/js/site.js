@@ -17,3 +17,8 @@ dc = {
     }
   }
 };
+$(document).ready(function(){
+  $('.one-click').click(function(){
+    $(this).attr('disabled', true).closest('form').submit();
+  });
+});

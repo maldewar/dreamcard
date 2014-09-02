@@ -98,7 +98,7 @@
           <li>{{{ Lang::get('panel.claim_retail_card_msg3') }}}</li>
         </ol>
         <div class="form-group text-center">
-          <button type="submit" class="btn btn-primary">
+          <button type="submit" class="btn btn-primary one-click">
             {{{ Lang::get('panel.claim_card_btn') }}} <span class="glyphicon glyphicon-ok"></span>
           </button>
         </div>

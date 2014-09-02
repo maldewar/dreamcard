@@ -99,7 +99,7 @@
           </div>
         </div>
         <div class="form-group text-center">
-          <button type="submit" class="btn btn-primary">
+          <button type="submit" class="btn btn-primary one-click">
             {{{ Lang::get('panel.send_gift_card') }}} <span class="glyphicon glyphicon-send"></span>
           </button>
         </div>
